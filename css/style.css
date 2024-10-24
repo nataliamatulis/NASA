@@ -2,18 +2,31 @@ main {
     min-height: calc(100vh - 160px);
   }
 
-#contenedor div {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 15px;
-    background-color: #f9f9f9;
-}
-
-#contenedor img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
   
+  .card {
+    display: flex;
+    flex-direction: column; /* Apila elementos verticalmente */
+    height: 100%; /* Asegura que todas las tarjetas tengan la misma altura */
+    overflow: hidden; /* Evita que el contenido desborde la tarjeta */
+}
+
+.card-header {
+    flex-shrink: 0; /* Evita que la navbar se encoja */
+}
+
+.card-body {
+    flex-grow: 1; /* Permite que el cuerpo ocupe el espacio restante */
+    overflow-y: auto; /* Habilita el scroll vertical si el contenido es grande */
+    max-height: 200px; /* Ajusta la altura máxima según sea necesario */
+    padding: 10px; /* Espaciado interno */
+}
+
+.card-title {
+    margin-bottom: 0.5rem; /* Espaciado entre el título y el texto */
+}
+
+.card-text {
+    margin-bottom: 0.5rem; /* Espaciado entre los elementos de texto */
+    overflow-wrap: break-word; /* Permite que las palabras largas se dividan */
+    white-space: normal; /* Permite que el texto se ajuste en varias líneas */
+}
