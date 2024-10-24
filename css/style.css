@@ -1,32 +1,46 @@
 main {
+    color: rgb(44, 108, 164);
+    background-color: rgb(255, 255, 255);
     min-height: calc(100vh - 160px);
-  }
-
-  
-  .card {
     display: flex;
-    flex-direction: column; /* Apila elementos verticalmente */
-    height: 100%; /* Asegura que todas las tarjetas tengan la misma altura */
-    overflow: hidden; /* Evita que el contenido desborde la tarjeta */
+    flex-wrap: wrap; /* Permite que las tarjetas se distribuyan en varias filas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
 }
 
-.card-header {
-    flex-shrink: 0; /* Evita que la navbar se encoja */
+.card {
+    color: rgb(44, 108, 164);
+    background-color: rgb(255, 255, 255);
+    height: 300px; /* Altura de la tarjeta */
+    width: 400px; /* Ancho de la tarjeta */
+    margin: 10px; /* Espaciado entre tarjetas */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Oculta el desbordamiento */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para un efecto de profundidad */
+}
+
+.card img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 150px; /* Altura máxima para la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
 }
 
 .card-body {
-    flex-grow: 1; /* Permite que el cuerpo ocupe el espacio restante */
-    overflow-y: auto; /* Habilita el scroll vertical si el contenido es grande */
-    max-height: 200px; /* Ajusta la altura máxima según sea necesario */
+    color: rgb(44, 108, 164)ue;
+    background-color: white;
+    flex: 1; /* Permite que el cuerpo de la tarjeta ocupe todo el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea el contenido al principio */
+    align-items: center; /* Centra el texto horizontalmente */
     padding: 10px; /* Espaciado interno */
+    overflow-y: auto; /* Permite el scroll vertical */
+    max-height: calc(100% - 160px); /* Altura máxima para el cuerpo */
 }
 
-.card-title {
-    margin-bottom: 0.5rem; /* Espaciado entre el título y el texto */
-}
-
-.card-text {
-    margin-bottom: 0.5rem; /* Espaciado entre los elementos de texto */
-    overflow-wrap: break-word; /* Permite que las palabras largas se dividan */
-    white-space: normal; /* Permite que el texto se ajuste en varias líneas */
+footer {
+    color: rgb(44, 108, 164);
+    background-color: white;
 }
